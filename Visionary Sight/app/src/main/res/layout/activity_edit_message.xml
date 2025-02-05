@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    tools:context=".SOS.EditMessageActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Edit Message"/>
+    </LinearLayout>
+
+    <!-- Top bar line -->
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp" />
+
+
+    <LinearLayout
+        android:id="@+id/message_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button_detection"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_line">
+
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter SOS Message"
+            android:background="@drawable/gradient_rounded_text_field"
+            android:textColorHint="@color/blue_grey_400"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:padding="15dp"
+            android:elevation="4dp"
+            android:textColor="@color/DarkBlue" />
+
+        <TextView
+            android:id="@+id/updated_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LastUpdated: "
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="290dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        style="@style/BottomButtonLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_save_message"
+                style="@style/BottomButton"
+                android:text="Save Message"
+                android:drawableLeft="@drawable/save_message" />
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_go_back"
+                style="@style/BottomButton"
+                android:text="Go Back"
+                android:drawableLeft="@drawable/ic_go_back_logo" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

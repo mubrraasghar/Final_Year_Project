@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NearbyPlacesActivity"
+    android:background="@color/DarkBlue">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Nearby Places"/>
+    </LinearLayout>
+
+    <!-- Top bar line -->
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_below="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp" />
+
+    <!-- ListView for places -->
+    <ListView
+        android:id="@+id/listViewPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom_buttons_layout"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"
+        android:layout_below="@id/top_bar_line"
+        android:layout_margin="5dp"
+         />
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons_layout"
+        style="@style/BottomButtonLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_read_all_places"
+                style="@style/BottomButton"
+                android:text="Read All"
+                android:drawableLeft="@drawable/ic_again" />
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_go_back"
+                style="@style/BottomButton"
+                android:text="Go Back"
+                android:drawableLeft="@drawable/ic_go_back_logo" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    tools:context=".Detection.ActivityDetectionActivity">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Activity Detection" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/camera_preview_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_line"
+        app:layout_constraintBottom_toTopOf="@id/result_text_view_scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/captured_image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@android:color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.ScrollView
+        android:id="@+id/result_text_view_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/camera_preview_layout"
+        app:layout_constraintBottom_toTopOf="@id/bottom_buttons_layout"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/result_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results will be shown here"
+            android:textColor="@color/quantum_orange"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:justificationMode="inter_word" />
+    </android.widget.ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons_layout"
+        style="@style/BottomButtonLinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:visibility="gone"
+            style="@style/BottomButtonFrameLayout">
+
+            <Button
+                android:id="@+id/button_reset"
+                style="@style/BottomButton"
+                android:text="RESET"
+                android:drawableLeft="@drawable/ic_reset" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:visibility="gone"
+            style="@style/BottomButtonFrameLayout">
+
+            <Button
+                android:id="@+id/button_capture"
+                style="@style/BottomButton"
+                android:text="Capture"
+                android:drawableLeft="@drawable/capture_logo" />
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+
+            <Button
+                android:id="@+id/button_go_back"
+                style="@style/BottomButton"
+                android:text="Go Back"
+                android:drawableLeft="@drawable/ic_go_back_logo" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

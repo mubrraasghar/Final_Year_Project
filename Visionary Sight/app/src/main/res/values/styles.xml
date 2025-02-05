@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Top Bar Style -->
+    <style name="TopBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_background</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!-- Style for the Top Bar Logo (ImageView) -->
+    <style name="TopBarLogoStyle">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:src">@drawable/ic_logo</item>
+        <item name="android:contentDescription">App Logo</item>
+    </style>
+
+    <!-- Style for the Top Bar Title (TextView) -->
+    <style name="TopBarTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BackgroundColor</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="ButtonStyleBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@drawable/transparent_background</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:drawablePadding">40dp</item>
+    </style>
+
+    <style name="MenuButtonStyle" parent="ButtonStyleBase">
+        <item name="android:textColor">@color/BackgroundColor</item>
+    </style>
+
+
+        <!-- Style for LinearLayout -->
+        <style name="BottomButtonLinearLayout" >
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_alignParentBottom">true</item>
+            <item name="android:orientation">vertical</item>
+            <item name="android:padding">16dp</item>
+        </style>
+
+        <!-- Style for FrameLayout -->
+        <style name="BottomButtonFrameLayout">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_marginBottom">8dp</item>
+            <item name="android:background">@drawable/gradient_rounded_button</item>
+        </style>
+
+        <!-- Style for Button -->
+        <style name="BottomButton" parent="Widget.MaterialComponents.Button">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">85dp</item>
+            <item name="android:layout_marginBottom">8dp</item>
+            <item name="android:background">@android:color/transparent</item>
+            <item name="android:gravity">center_vertical|start</item>
+            <item name="android:paddingStart">20dp</item>
+            <item name="android:textColor">@color/BackgroundColor</item>
+            <item name="android:textSize">24sp</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+
+
+</resources>

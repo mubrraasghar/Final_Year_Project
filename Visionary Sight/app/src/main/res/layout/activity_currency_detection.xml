@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    tools:context=".Detection.CurrencyDetectionActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Currency Detection"/>
+    </LinearLayout>
+
+    <!-- Top bar line -->
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_below="@id/top_bar"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:padding="2dp" />
+
+    <!-- SurfaceView for Camera Preview -->
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="8dp"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar_line" />
+
+    <!-- Currency Detection Result ImageView -->
+    <ImageView
+        android:id="@+id/currencyDetectionResultImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/surfaceView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        tools:ignore="ContentDescription" />
+    <!-- Currency Detection Results TextView -->
+    <TextView
+        android:id="@+id/currencyDetectionResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="20sp"
+        android:textColor="@color/quantum_yellow"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_go_back" />
+
+    <LinearLayout
+        android:id="@+id/layout_go_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/BottomButtonLinearLayout"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_go_back"
+
+                style="@style/BottomButton"
+                android:text="Go Back"
+                android:drawableLeft="@drawable/ic_go_back_logo" />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SOS.ContactListActivity"
+    android:background="@color/DarkBlue">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Contacts List"/>
+    </LinearLayout>
+
+    <!-- Top bar line -->
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_below="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp" />
+
+    <!-- ListView for Contacts -->
+    <ListView
+        android:id="@+id/contact_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_above="@+id/layout_go_back"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:id="@+id/layout_go_back"
+        style="@style/BottomButtonLinearLayout">
+
+        <FrameLayout
+            style="@style/BottomButtonFrameLayout">
+            <Button
+                android:id="@+id/button_go_back"
+                style="@style/BottomButton"
+                android:text="Go Back"
+                android:drawableLeft="@drawable/ic_go_back_logo" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

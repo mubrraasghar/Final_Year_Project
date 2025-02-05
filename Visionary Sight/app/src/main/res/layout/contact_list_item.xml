@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:layout_margin="5dp"
+
+    android:elevation="4dp">
+
+    <!-- Contact name displayed at the top -->
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Name"
+        android:textColor="@color/DarkBlue"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <!-- Contact phone number displayed below the name -->
+    <TextView
+        android:id="@+id/contact_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+92123456789"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+</LinearLayout>

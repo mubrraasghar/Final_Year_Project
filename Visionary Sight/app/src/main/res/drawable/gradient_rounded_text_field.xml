@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Gradient Border -->
+    <item>
+        <shape>
+            <gradient
+            android:startColor="#ffde59"
+            android:endColor="#ff914d"
+            android:angle="0" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+
+    <item
+        android:left="@dimen/margin_gradient_edittext"
+        android:top="@dimen/margin_gradient_edittext"
+        android:right="@dimen/margin_gradient_edittext"
+        android:bottom="@dimen/margin_gradient_edittext">
+        <shape>
+            <solid android:color="@color/white" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/BackgroundColor"
+    tools:context=".Detection.DetectionActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Detection"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_below="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp">
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar_line"
+        android:background="@color/BackgroundColor"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_currency_detection"
+                    style="@style/MenuButtonStyle"
+                    android:text="Currency Detection"
+                    android:drawableLeft="@drawable/ic_currency_detection" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_activity_detection"
+                    style="@style/MenuButtonStyle"
+                    android:text="Activity Detection"
+                    android:drawableLeft="@drawable/ic_activity_detection" />
+            </FrameLayout>
+            <!-- Activity Detection Button -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_object_detection"
+                    style="@style/MenuButtonStyle"
+                    android:text="Object Detection"
+                    android:drawableLeft="@drawable/ic_object_detection" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_go_back"
+                    style="@style/MenuButtonStyle"
+                    android:text="Go Back"
+                    android:drawableLeft="@drawable/ic_go_back" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/BackgroundColor"
+    tools:context=".LocationActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        style="@style/TopBarStyle">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/TopBarLogoStyle" />
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/TopBarTitleStyle"
+            android:text="Location"/>
+    </LinearLayout>
+
+    <!-- Top bar line -->
+    <LinearLayout
+        android:id="@+id/top_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:layout_below="@id/top_bar"
+        android:orientation="horizontal"
+        android:padding="2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar_line"
+        android:background="@color/BackgroundColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:visibility="gone"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_fetch_location"
+                    style="@style/MenuButtonStyle"
+                    android:text="Fetch Location"
+                    android:drawableLeft="@drawable/ic_location" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_nearby_places"
+                    style="@style/MenuButtonStyle"
+                    android:text="Nearby Places"
+                    android:drawableLeft="@drawable/nearby_llocation" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_location_history"
+                    style="@style/MenuButtonStyle"
+                    android:drawableLeft="@drawable/ic_history"
+                    android:text="Location History" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_nearby_places_history"
+                    style="@style/MenuButtonStyle"
+                    android:text="Nearby History"
+                    android:drawableLeft="@drawable/ic_history" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_vertical_margin"
+                android:background="@drawable/gradient_rounded_button">
+
+                <Button
+                    android:id="@+id/button_main_menu"
+                    style="@style/MenuButtonStyle"
+                    android:text="Go Back"
+                    android:drawableLeft="@drawable/ic_go_back" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
