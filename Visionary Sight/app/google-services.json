@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1020380588155",
+    "firebase_url": "https://visionary-sight-b91ab-default-rtdb.firebaseio.com",
+    "project_id": "visionary-sight-b91ab",
+    "storage_bucket": "visionary-sight-b91ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020380588155:android:65a87261d8640af3a7dade",
+        "android_client_info": {
+          "package_name": "com.VisionarySight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020380588155-a4sro4g0mhhcv8k7u3llod4615nip72d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXSNeYJkGVK38pEP1hoAY6X7I6wQz2tyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020380588155-a4sro4g0mhhcv8k7u3llod4615nip72d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020380588155:android:7cabd1aead1bfff7a7dade",
+        "android_client_info": {
+          "package_name": "com.example.visionarysight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020380588155-sm8a1bpdsknrdjvvdthnvnnlk9lvv5sb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.visionarysight",
+            "certificate_hash": "1f184af8cb7ea8d21682f7507bbd9a00b3fc9d21"
+          }
+        },
+        {
+          "client_id": "1020380588155-a4sro4g0mhhcv8k7u3llod4615nip72d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXSNeYJkGVK38pEP1hoAY6X7I6wQz2tyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020380588155-a4sro4g0mhhcv8k7u3llod4615nip72d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
