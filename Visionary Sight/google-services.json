@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1076375537791",
+    "project_id": "visionarysightapp",
+    "storage_bucket": "visionarysightapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076375537791:android:47f29c39c0b2fb5792d74a",
+        "android_client_info": {
+          "package_name": "com.example.visionarysight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX95Geyr2_QhvhLIHs5Qtimp274ma0q2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
